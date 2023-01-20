@@ -43,8 +43,8 @@
 
     - name: Log into private registry and force re-authorization
       docker_login:
-        username: {{ lookup('env', 'DOCKER_UNAME') }}
-        password: {{ lookup('env', 'DOCKER_PASSWORD') }}
+        username: "{{ lookup('env', 'DOCKER_UNAME') }}"
+        password: "{{ lookup('env', 'DOCKER_PASSWORD') }}"
         reauthorize: yes
 
     - name: pull an image
